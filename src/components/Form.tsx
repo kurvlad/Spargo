@@ -21,7 +21,6 @@ export default function Form({ setIsUpdate }: FormProps) {
       value: Number(value),
       deletedAt: "2025-01-19T21:39:04.486",
     };
-    console.log(data);
     createPost(data).then((res) => {
       if (res.ok) {
         setIsUpdate(true);
