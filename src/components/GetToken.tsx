@@ -27,13 +27,6 @@ export default function GetToken({ token, setToken }: GetTokenProps) {
     <>
       <button onClick={handleGetToken}>Войти</button>
       <button onClick={handleDeleteToken}>Выйти</button>
-      {/* <button
-        onClick={() => {
-          console.log(localStorage.getItem("token"));
-        }}
-      >
-        Показать localStorage
-      </button> */}
       {token ? <p>Вы авторизованы</p> : <p>Вы не авторизованы</p>}
       {error && <p>Произошла ошибка: {error}</p>}
     </>

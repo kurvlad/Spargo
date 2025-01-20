@@ -20,7 +20,6 @@ export default function ChangeForm({
   setIsUpdate,
   closeModal,
 }: ChangeProps) {
-  console.log(selectItem);
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -32,7 +31,7 @@ export default function ChangeForm({
       value: Number(target.value.value),
       deletedAt: target.deletedAt.value,
     };
-    changePost(selectItem.id, data).then((res) => {
+    changePost(selectItem.id, data).then(() => {
       setIsUpdate(true);
       closeModal();
     });
@@ -56,7 +55,7 @@ export default function ChangeForm({
         placeholder="количество"
       />
       <input
-        defaultValue={selectItem.date}
+        defaultValue={selectItem.deletedAt}
         type="date"
         name="deletedAt"
         placeholder="Дата удаления"

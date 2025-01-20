@@ -1,5 +1,4 @@
 import { SetStateAction, useEffect, useState } from "react";
-
 import "./App.css";
 import { deletePost, fetchData } from "./utils/fetch";
 import GetToken from "./components/GetToken";
@@ -39,13 +38,8 @@ function App() {
     setIsUpdate(false);
   }, [isUpdate]);
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-
   const handleDeleteId = (id: string) => {
     deletePost(id).then(() => {
-      console.log("update");
       setIsUpdate(true);
     });
   };

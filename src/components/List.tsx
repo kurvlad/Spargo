@@ -39,6 +39,7 @@ const preventObj = {
   id: "",
   description: "",
   value: 0,
+  deletedAt: "",
   updateAt: "",
   deleteAt: "",
 };
